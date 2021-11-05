@@ -100,8 +100,6 @@
 <div class="modal fade" id="ContactMeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
       <div class="modal-body">
         <div class="row">
                 <div class="col-lg-12">
@@ -115,14 +113,14 @@
                             <div class="row">
                                 <div class="col-md-12 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:Label Text="First Name" runat="server"/>
-                                        <asp:TextBox runat="server" Enabled="true" ID="firstname" CssClass="form-control input-sm" placeholder="First Name" />
+                                        <asp:Label Text="First Name" runat="server" CssClass="glyphicon-asterisk" />
+                                        <asp:TextBox runat="server" Enabled="true" ID="firstname" CssClass="form-control input-sm" placeholder="First Name"  />
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorFirstname" runat="server" Style="color: #ff0000 " Display ="Dynamic" ErrorMessage="First name required" ControlToValidate="firstname" />
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:Label Text="Last Name" runat="server"/>
+                                        <asp:Label Text="Last Name" runat="server" CssClass="glyphicon-asterisk" />
                                         <asp:TextBox runat="server" Enabled="true" ID="lastname" CssClass="form-control input-sm" placeholder="Last Name"/>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastname" runat="server" Style="color: #ff0000 " Display ="Dynamic" ErrorMessage="Last name required" ControlToValidate="lastname"  />
                                     </div>
@@ -131,7 +129,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:Label Text="Email" runat="server"/>
+                                        <asp:Label Text="Email" runat="server" CssClass="glyphicon-asterisk" />
                                         <asp:TextBox runat="server" Enabled="true" Textmode="Email" ID="email" CssClass="form-control input-sm" placeholder="example@email.com"/>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" Style="color: #ff0000 " Display ="Dynamic" ErrorMessage="Email required" ControlToValidate="email" />
                                         <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" 
@@ -141,7 +139,7 @@
                                 </div>
                                 <div class="col-md-12 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:Label Text="Phone number" runat="server"/>
+                                        <asp:Label Text="Phone number" runat="server" CssClass="glyphicon-asterisk" />
                                         <asp:TextBox runat="server" Enabled="true" Textmode="Phone" ID="phone" CssClass="form-control input-sm" placeholder="xxx-xxx-xxxx"/>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhone" runat="server" Style="color: #ff0000 " Display ="Dynamic" ErrorMessage="Phone number required" ControlToValidate="phone" />
                                          <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"
@@ -153,12 +151,12 @@
                             <div class="row">
                                 <div class="col-md-12 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:Label Text="Region" runat="server"/>
+                                        <asp:Label Text="Region" runat="server" CssClass="glyphicon-asterisk" />
                                         <asp:DropDownList runat="server" ID="region" CssClass="form-control input-sm">
                                             <asp:ListItem Text="USA"/>
                                             <asp:ListItem Text="Other"/>
                                         </asp:DropDownList>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorRegion" runat="server" Style="color: #ff0000 " Display ="Dynamic" ErrorMessage="Field cannot be empty" ControlToValidate="region" />
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorRegion" runat="server" Style="color: #ff0000" Display ="Dynamic" ErrorMessage="Field cannot be empty" ControlToValidate="region" />
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-md-offset-1">
@@ -186,6 +184,9 @@
                                 </div>
                              </div>
                          </div>
+                        <div class="col-md-12 col-md-offset-0" Style="color: #969696">
+                                <h6>By continuing you are agreeing to have ed2go contact you.</h6>
+                            </div>
                       </section>
                 </div>
             </div>
